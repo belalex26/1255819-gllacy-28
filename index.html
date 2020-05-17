@@ -5,8 +5,139 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+    <header class="header">
+      <div class="logo">
+        <img class="logo__images" src="https://via.placeholder.com/150x100" alt="Gllacy shop">
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Новинки</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="catalog.html">Сливочное</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Щербеты</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О компании</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="search__link" href="#">Поиск</a> <!--форма поика-->
+      <a class="singIn__link" href="#">Вход</a> <!--форма входа-->
+      <a class="basket__link" href="#">Корзина</a>
+    </header>
+    <main class="main">
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__text">с 10 до 20, ежедневно</p>
+        <a class="contacts__tel" href="tel:88124502525">8 812 450-25-25</a>
+      </section>
+      <section class="slider">
+        <h2>Промо слайдер</h2>
+      </section>
+      <section class="promo">
+        <h2 class="promo__title">Акции</h2>
+      </section>
+      <section class="products">
+        <h2>Популярные товары</h2>
+      </section>
+      <section class="about">
+        <h1 class="about__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h1>
+        <p class="about__text">
+          <span class="about__icon1"></span>
+          Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+        </p>
+        <p class="about__text">
+          <span class="about__icon2"></span>
+          Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+        </p>
+        <p class="about__text">
+          <span class="about__icon3"></span>
+          Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+        </p>
+        <p class="about__text">
+          <span class="about__icon4"></span>
+          Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+        </p>
+      </section>
+      <article class="blog">
+        <h2 class="blog__title">Новое в нашем блоге</h2>
+        <a class="blog__link" href="">10 способов сервировки фруктовых щербетов к столу</a>
+      </article>
+      <section class="subscription">
+        <h2 class="subscription__title">Подписка на рассылку</h2>
+        <p class="subscription__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <a class="subscription__form" href=""></a> <!--форма подписки-->
+        <button class="button subscription__btn ">Отправить</button>
+      </section>
+      <section class="map">
+        <h2 class="map__title">Как добраться</h2>
+      </section>
+    </main>
+    <footer>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="#">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">ВКонтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <section class="info">
+        <h2>Информация</h2>
+        <ul class="info__list">
+          <li class="info__item">
+            <a class="info__link" href="#">
+              <span></span> Для поставщиков
+            </a>
+          </li>
+          <li class="info__item">
+            <a class="info__link" href="#">
+               О производстве
+            </a>
+          </li>
+          <li class="info__item">
+            <a class="info__link" href="#">
+              Наши документы
+            </a>
+          </li>
+          <li class="info__item">
+            <a class="info__link" href="#">
+              Экологические стандарты
+            </a>
+          </li>
+        </ul>
+      </section>
+      <p class="copy">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="https://via.placeholder.com/150x100" alt="html academy">
+        </a>
+        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019
+      </p>
+    </footer>
 </html>
