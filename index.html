@@ -3,12 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!--для слайдера-->
-    <input class="slider-control" type="radio" id="btn-1" name="toggle" checked>
-    <input class="slider-control" type="radio" id="btn-2" name="toggle">
-    <input class="slider-control" type="radio" id="btn-3" name="toggle">
 
     <header class="header">
       <nav class="menu">
@@ -49,43 +47,35 @@
           <a class="navigation-bar__basket-link" href="#">Корзина</a>
         </div>
       </nav>
-    </header>
-    <main class="main">
-      <h1 class="idex-title">Магазин Глэйси</h1>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__text">с 10 до 20, ежедневно</p>
         <a class="contacts__tel" href="tel:88124502525">8 812 450-25-25</a>
       </section>
-
+    </header>
+    <main class="main">
+      <h1 class="idex-title">Магазин Глэйси</h1>
       <section class="slider">
-        <h2>Промо слайдер</h2>
-        <div class="slider__item" id="slide-1">
-          <img class="slider__img" src="https://via.placeholder.com/150x100" alt="мороженное">
-          <p class="slider__text">
-            Крем-брюле и пломбир с малиновым джемом
-          </p>
-          <a href="#">Давайте Оба!</a>
+        <h2 class="slider__title">Промо слайдер</h2>
+              
+        <div class="slider__item slide-1">
+          <h3 class="slider__text">Крем-брюле и пломбир с малиновым джемом</h3>
+          <a class="button slider__btn" href="#">Давайте Оба!</a>
         </div>
-        <div class="slide" id="slide-2">
-          <img class="slider__img" src="https://via.placeholder.com/150x100" alt="мороженное">
-          <p class="slider__text">
-            Шоколадный пломбир и лимонный сорбет
-          </p>
-          <a href="#">Давайте Оба!</a>
+        <div class="slider__item slide-2">
+          <h3 class="slider__text">Шоколадный пломбир и лимонный сорбет</h3>
+          <a class="button slider__btn" href="#">Давайте Оба!</a>
         </div>
-        <div class="slide" id="slide-3">
-          <img  class="slider__img" src="https://via.placeholder.com/150x100" alt="мороженное">
-          <p class="slider__text">
-            Пломбир с помадкой и клубничный щербет
-          </p>
-          <a href="#">Давайте Оба!</a>
+        <div class="slider__item slide-3">
+          <h3 class="slider__text">Пломбир с помадкой и клубничный щербет</h3>
+          <a class="button slider__btn" href="#">Давайте Оба!</a>
         </div>
-        <div class="slide-btns">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
-        </div>
+            
+        <div class="slider-btns">
+          <button class="slider__control slider__slide1"></button>
+          <button class="slider__control slider__slide2"></button>
+          <button class="slider__control slider__slide3"></button>
+        </div>      
       </section>
 
       <section class="promo">
@@ -108,6 +98,7 @@
         </ul>
       </section>
       <section class="products">
+
         <h2>Популярные товары</h2>
         <ul class="products__list">
           <li class="products__item">
@@ -115,36 +106,28 @@
             <p class="products__item-prise">
               310 &#8381;<span>&#8260; кг</span>
             </p>
-            <a class="products__link" href="#">
               <h3 class="products__item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            </a>
           </li>
           <li class="products__item">
             <img class="products__img" src="https://via.placeholder.com/150x100" alt="">
             <p class="products__item-prise">
               410 &#8381;<span>&#8260; кг</span>
             </p>
-            <a class="products__link" href="#">
               <h3 class="products__item-title">Сливочно-кофейное с кусочками шоколада</h3>
-            </a>
           </li>
           <li class="products__item">
             <img class="products__img" src="https://via.placeholder.com/150x100" alt="">
             <p class="products__item-prise">
               355 &#8381;<span>&#8260; кг</span>
             </p>
-            <a class="products__link" href="#">
               <h3 class="products__item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
-            </a>
           </li>
           <li class="products__item">
             <img class="products__img" src="https://via.placeholder.com/150x100" alt="">
             <p class="products__item-prise">
                415 &#8381;<span>&#8260; кг</span>
             </p>
-            <a class="products__link" href="#">
               <h3 class="products__item-title">Сливочное крем-брюле с карамельной подливкой</h3>
-            </a>
           </li>
         </ul>
       </section>
@@ -179,14 +162,14 @@
         <h2 class="map__title">Как добраться</h2>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f313ad053af6dec2fa5a3818b5b82a1374f673840e333a88793262525cd97cc&amp;source=constructor" width="1200" height="430"></iframe>
         <div class="map__info">
-          <p class="map__address">
-            Адрес главного офиса <br>
-            и офлайн-магазина:
-            <span> ул. Большая Конюшенная, 19/8, Санкт-Петербург></span>
+          <p class="map__address map__description">
+            <span class="map__description">Адрес главного офиса 
+            и офлайн-магазина:</span>
+            ул. Большая Конюшенная, 19/8, Санкт-Петербург
           </p>
-          <p class="map__telephon">
-            Для заказов по телефону:<br>
-            <a href="tel:88124502525">8 812 450-25-25</a><br>
+          <p class="map__telephon map__description">
+            Для заказов по телефону:
+            <a class="map__description" href="tel:88124502525">8 812 450-25-25</a>
             (с 10 до 20 ежедневно)
           </p>
           <button class="button map__btn">
