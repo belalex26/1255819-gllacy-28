@@ -44,19 +44,19 @@
         <div class="navigation-bar">
           <a class="navigation-bar__search-link" href="#">Поиск</a> <!--форма поика-->
           <a class="navigation-bar__singIn-link" href="#">Вход</a> <!--форма входа-->
-          <a class="navigation-bar__basket-link" href="#">Корзина</a>
+          <a class="navigation-bar__basket-link" href="#">Пусто</a><!--корзина-->
         </div>
       </nav>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
+        <h2 class="contacts__title visually-hidden">Контакты</h2>
         <p class="contacts__text">с 10 до 20, ежедневно</p>
         <a class="contacts__tel" href="tel:88124502525">8 812 450-25-25</a>
       </section>
     </header>
     <main class="main">
-      <h1 class="idex-title">Магазин Глэйси</h1>
+      <h1 class="idex-title visually-hidden">Магазин Глэйси</h1>
       <section class="slider">
-        <h2 class="slider__title">Промо слайдер</h2>
+        <h2 class="slider__title visually-hidden">Промо слайдер</h2>
               
         <div class="slider__item slide-1">
           <h3 class="slider__text">Крем-брюле и пломбир с малиновым джемом</h3>
@@ -79,7 +79,7 @@
       </section>
 
       <section class="promo">
-        <h2 class="promo__title">Акции</h2>
+        <h2 class="promo__title visually-hidden">Акции</h2>
         <ul class="promo__list">
           <li class="promo__item">
             <h3 class="promo__item-title">Малинка даром!</h3>
@@ -99,31 +99,31 @@
       </section>
       <section class="products">
 
-        <h2>Популярные товары</h2>
+        <h2 class="products__title visually-hidden">Популярные товары</h2>
         <ul class="products__list">
           <li class="products__item">
-            <img src="img/catalog1.jpg" width="267" height="267" alt="фото товара">>
+            <img src="img/catalog1.png" width="267" height="267" alt="фото товара">
             <p class="products__item-prise">
               310 &#8381;<span>&#8260; кг</span>
             </p>
               <h3 class="products__item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </li>
           <li class="products__item">
-            <img src="img/catalog2.jpg" width="267" height="267" alt="фото товара">
+            <img src="img/catalog2.png" width="267" height="267" alt="фото товара">
             <p class="products__item-prise">
               410 &#8381;<span>&#8260; кг</span>
             </p>
               <h3 class="products__item-title">Сливочно-кофейное с кусочками шоколада</h3>
           </li>
           <li class="products__item">
-            <img src="img/catalog3.jpg" width="267" height="267" alt="фото товара">
+            <img src="img/catalog3.png" width="267" height="267" alt="фото товара">
             <p class="products__item-prise">
               355 &#8381;<span>&#8260; кг</span>
             </p>
               <h3 class="products__item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </li>
           <li class="products__item">
-            <img src="img/catalog4.jpg" width="267" height="267" alt="фото товара">
+            <img src="img/catalog4.png" width="267" height="267" alt="фото товара">
             <p class="products__item-prise">
                415 &#8381;<span>&#8260; кг</span>
             </p>
@@ -153,13 +153,18 @@
         <a class="blog__link" href="">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscription">
-        <h2 class="subscription__title">Подписка на рассылку</h2>
+        <h2 class="subscription__title visually-hidden">Подписка на рассылку</h2>
         <p class="subscription__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <a class="subscription__form" href=""></a> <!--форма подписки-->
-        <button class="button subscription__btn ">Отправить</button>
+        <!--форма подписки-->
+        <form class="subscription__form" action="https://echo.htmlacademy.ru" method="get">
+          <label for="subscription__email">e-mail</label>
+          <input id="subscription__email" type="email" name="login" placeholder="email@example.com">
+          <button class="button subscription__btn ">Отправить</button>
+        </form>
       </section>
+
       <section class="map">
-        <h2 class="map__title">Как добраться</h2>
+        <h2 class="map__title visually-hidden">Как добраться</h2>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f313ad053af6dec2fa5a3818b5b82a1374f673840e333a88793262525cd97cc&amp;source=constructor" width="1200" height="430"></iframe>
         <div class="map__info">
           <p class="map__address map__description">
@@ -180,24 +185,24 @@
     </main>
     <footer class="footer">
       <section class="social">
-        <h2 class="social__title">Мы в социальных сетях</h2>
+        <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="#">Facebook</a>
+            <a class="social__link" href="#"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">ВКонтакте</a>
+            <a class="social__link" href="#"><span class="visually-hidden">ВКонтакте</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">Instagram</a>
+            <a class="social__link" href="#"><span class="visually-hidden">Instagram</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">Твиттер</a>
+            <a class="social__link" href="#"><span class="visually-hidden">Твиттер</span></a>
           </li>
         </ul>
       </section>
       <section class="info">
-        <h2>Информация</h2>
+        <h2 class="info__title visually-hidden">Информация</h2>
         <ul class="info__list">
           <li class="info__item">
             <a class="info__link" href="#">
@@ -222,6 +227,7 @@
         </ul>
       </section>
       <section class="copy">
+        <h2 class="copy__title visually-hidden">Копирайт</h2>
         <a class="copy__link-img" href="https://htmlacademy.ru/intensive/htmlcss">
           <img class="copy__img" src="img/logo-htmlacademy.svg" width="108" height="39" alt="логотип академии">
         </a>
@@ -230,6 +236,48 @@
         </p>
       </section> 
     </footer>
+
+    <section class="search">
+      <h2 class="search__title visually-hidden">Форма поиска</h2>
+      <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+        <input type="text" placeholder="Крем-брюле ">
+      </form>
+    </section>
+
+    <section class="singIn">
+      <h2 class="singIn__title visually-hidden">Личный кабинет</h2>
+      <form class="singIn__form" action="https://echo.htmlacademy.ru" method="get">
+        <p class="singIn__description">
+          <label for="singIn__login">Логин</label>
+          <input id="singIn__login" type="email" name="login" placeholder="email@example.com">
+        </p>
+        <p class="singIn__description">
+          <label for="singIn__password">Пароль</label>
+          <input id="singIn__password" type="password" name="password" placeholder="......">
+        </p>
+        <button class="btn" type="submit">Войти</button>
+        <div class="singIn__list"> <!--обертка-->
+          <a class="singIn__link" href="#">Забыли пароль?</a>
+          <a class="singIn__link" href="#">Новая регистрация</a>
+        </div>
+      </form>
+    </section>
+
+  <section class="feedback">
+    <h2 class="feedback__title visually-hidden">Обратная связь</h2>
+    <p class="feedback__description">Мы обязательно Вам ответим!</p>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="feedback__email">e-mail</label>
+        <input id="feedback__email" type="email" name="login" placeholder="email@example.com">
+        <label for="feedback__text">Текст сообщения</label>
+        <textarea name="feedback__text" rows="5">В свободной форме</textarea>
+      </p>
+      <button class="btn" type="submit">Отправить</button>
+    </form>
+    <button class="feedback__close" type="button">Закрыть</button>
+  </section>
+
   </body>
 
 </html>
