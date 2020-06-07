@@ -42,8 +42,36 @@
           </li>
         </ul>
         <div class="navigation-bar">
-          <a class="navigation-bar__search-link" href="#">Поиск</a> <!--форма поика-->
-          <a class="navigation-bar__singIn-link" href="#">Вход</a> <!--форма входа-->
+          <div class="navigation-bar__search-wrapper">
+            <a class="navigation-bar__search-link" href="#">Поиск</a>
+            <div class="navigation-bar__search-block">
+              <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+                <input type="text" placeholder="Крем-брюле">
+              </form>
+            </div>
+          </div>
+
+          <div class="navigation-bar__singIn-wrapper">
+            <a class="navigation-bar__singIn-link" href="#">Вход</a>
+            <div class="navigation-bar__singIn-block">
+              <form class="singIn__form" action="https://echo.htmlacademy.ru" method="get">
+                <div class="singIn__description">
+                  <label for="singIn__login">Логин</label>
+                  <input id="singIn__login" type="email" name="login" placeholder="email@example.com">
+                </div>
+                <div class="singIn__description">
+                  <label for="singIn__password">Пароль</label>
+                  <input id="singIn__password" type="password" name="password" placeholder="......">
+                </div>
+                <button class="btn" type="submit">Войти</button>
+                <div class="singIn__list"> <!--обертка-->
+                  <a class="singIn__link" href="#">Забыли пароль?</a>
+                  <a class="singIn__link" href="#">Новая регистрация</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
           <a class="navigation-bar__basket-link" href="#">Пусто</a><!--корзина-->
         </div>
       </nav>
@@ -237,32 +265,6 @@
       </section> 
     </footer>
 
-    <section class="search">
-      <h2 class="search__title visually-hidden">Форма поиска</h2>
-      <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-        <input type="text" placeholder="Крем-брюле ">
-      </form>
-    </section>
-
-    <section class="singIn">
-      <h2 class="singIn__title visually-hidden">Личный кабинет</h2>
-      <form class="singIn__form" action="https://echo.htmlacademy.ru" method="get">
-        <p class="singIn__description">
-          <label for="singIn__login">Логин</label>
-          <input id="singIn__login" type="email" name="login" placeholder="email@example.com">
-        </p>
-        <p class="singIn__description">
-          <label for="singIn__password">Пароль</label>
-          <input id="singIn__password" type="password" name="password" placeholder="......">
-        </p>
-        <button class="btn" type="submit">Войти</button>
-        <div class="singIn__list"> <!--обертка-->
-          <a class="singIn__link" href="#">Забыли пароль?</a>
-          <a class="singIn__link" href="#">Новая регистрация</a>
-        </div>
-      </form>
-    </section>
-
   <section class="feedback">
     <h2 class="feedback__title visually-hidden">Обратная связь</h2>
     <p class="feedback__description">Мы обязательно Вам ответим!</p>
@@ -277,7 +279,7 @@
     </form>
     <button class="feedback__close" type="button">Закрыть</button>
   </section>
-
+  
   </body>
 
 </html>
