@@ -42,7 +42,7 @@
             <a class="menu__link" href="#">О компании</a>
           </li>
         </ul>
-        <div class="navigation-bar">
+        <div class="navigation-bar"> <!--обертка-->
 
           <div class="navigation-bar__search-wrapper">
             <a class="navigation-bar__search-link" href="#">Поиск</a>
@@ -124,11 +124,75 @@
       <section class="goods">
         <h2 class="goods__title">Сливочное</h2>
         <div class="filter"> <!--форма фильтра-->
-          <h3 class="filter__title visually-hidden">Фильтр товаров</h2>
           <form action="https://echo.htmlacademy.ru" method="get">
-           <button class="filter__btn" >Применить</button>
+            <div class="filter__line-one">
+
+              <div class="filter__item">
+                <p class="filter__item-title">Сортировка:</p>
+                <button class="filter__select"></button>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <button class="filter__value">по популярности</button>
+                  </li>
+                  <li class="filter__item">
+                    <button class="filter__value">сначала недорогие</button>
+                  </li>
+                  <li class="filter__item">
+                    <button class="filter__value">сначала дорогие</button>
+                  </li>
+                  <li class="filter__item">
+                    <button class="filter__value">>по жирности</button>
+                  </li>
+                </ul>
+              </div>
+      
+              <fieldset class="filter-item sort">
+                 <legend class="filter__item-title">Сортировка:</legend>
+                 <select name="sort" id="sort">
+                   <option value="on popularity">по популярности</option>
+                   <option value="ascending">сначала недорогие</option>
+                   <option value="descending">сначала дорогие</option>
+                   <option value="by fat content">по жирности</option>
+                  </select>
+              </fieldset>
+
+                <fieldset class="filter-item">
+                  <legend class="filter__item-title">Цена: 100 ₽ – 500 ₽</legend>
+                  <div class="range-filter">
+                    <div class="range-controls">
+                      <div class="scale">
+                        <div class="bar"></div>
+                      </div>
+                      <div class="toggle toggle-min"></div>
+                      <div class="toggle toggle-max"></div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="filter-item">
+                  <legend class="filter__item-title">Жирность:</legend>
+                  <input type="radio" name="fat-content" value="0"> 0%
+                  <input type="radio" name="fat-content" value="0-10" checked> до 10%
+                  <input type="radio" name="fat-content" value="10-30"> до 30%
+                  <input type="radio" name="fat-content" value="30+"> выше 30%
+                </fieldset>
+              </div>
+  
+            <div class="filter__line-two">
+              <fieldset class="filter-item">
+                <legend class="filter__item-title">Наполнители:</legend>
+                <input type="checkbox" name="optionally"  value="sugar" checked>сахарные присыпки
+                <input type="checkbox" name="optionally"  value="chocolate" checked>шоколадные
+                <input type="checkbox" name="optionally"  value="fruits">фрукты
+                <input type="checkbox" name="optionally"  value="syrup">сиропы
+                <input type="checkbox" name="optionally"  value="jam">джем
+             </fieldset>
+            </div>
+
+            <button class="filter__btn" type="submit">Применить</button>
           </form>
         </div>
+
         <ul class="goods__list">
             <!--первая линия товаров-->
             <li class="goods__item">
