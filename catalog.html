@@ -129,32 +129,22 @@
 
               <div class="filter__item">
                 <p class="filter__item-title">Сортировка:</p>
-                <button class="filter__select"></button>
+                <button class="filter__select" type="button" aria-label="сортировка по"></button>
                 <ul class="filter__list">
                   <li class="filter__item">
-                    <button class="filter__value">по популярности</button>
+                    <button class="filter__value" value="on popularity" type="button">по популярности</button>
                   </li>
                   <li class="filter__item">
-                    <button class="filter__value">сначала недорогие</button>
+                    <button class="filter__value" value="ascending" type="button">сначала недорогие</button>
                   </li>
                   <li class="filter__item">
-                    <button class="filter__value">сначала дорогие</button>
+                    <button class="filter__value" value="descending" type="button">сначала дорогие</button>
                   </li>
                   <li class="filter__item">
-                    <button class="filter__value">>по жирности</button>
+                    <button class="filter__value" value="by fat content" type="button">по жирности</button>
                   </li>
                 </ul>
               </div>
-      
-              <fieldset class="filter-item sort">
-                 <legend class="filter__item-title">Сортировка:</legend>
-                 <select name="sort" id="sort">
-                   <option value="on popularity">по популярности</option>
-                   <option value="ascending">сначала недорогие</option>
-                   <option value="descending">сначала дорогие</option>
-                   <option value="by fat content">по жирности</option>
-                  </select>
-              </fieldset>
 
                 <fieldset class="filter-item">
                   <legend class="filter__item-title">Цена: 100 ₽ – 500 ₽</legend>
