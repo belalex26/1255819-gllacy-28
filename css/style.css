@@ -1,3 +1,5 @@
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -7,4 +9,8 @@
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  .navigation-bar__basket-link{
+      background-image: url(../img/basket-red.svg);
   }
