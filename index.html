@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="site-wrapper site-wrapper-1 site-wrapper-3">
+      <div class="container">
 
     <header class="header">
       <nav class="menu">
@@ -43,7 +46,7 @@
         </ul>
         <div class="navigation-bar"> <!--обертка-->
           <div class="navigation-bar__search-wrapper">
-            <a class="navigation-bar__search-link" href="#">Поиск</a>
+            <a class="navigation-bar__search-link" href="#" aria-label="поиск"></a>
             <div class="navigation-bar__search-block">
               <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
                 <input type="text" placeholder="Крем-брюле">
@@ -72,7 +75,7 @@
             </div>
           </div>
 
-          <a class="navigation-bar__basket-link" href="#">Пусто</a><!--корзина-->
+          <a class="navigation-bar__basket-link" href="#" aria-label="корзина">Пусто</a>
         </div>
       </nav>
       <section class="contacts">
@@ -86,7 +89,7 @@
       <section class="slider">
         <h2 class="slider__title visually-hidden">Промо слайдер</h2>
               
-        <div class="slider__item slide-1">
+        <div class="slider__item slide-1 slide-current">
           <h3 class="slider__text">Крем-брюле и пломбир с малиновым джемом</h3>
           <a class="button slider__btn" href="#">Давайте Оба!</a>
         </div>
@@ -100,23 +103,23 @@
         </div>
             
         <div class="slider-btns">
-          <button class="slider__control slider__slide1"></button>
-          <button class="slider__control slider__slide2"></button>
-          <button class="slider__control slider__slide3"></button>
+          <button class="slider__control slider__slide1 slide-current" aria-label="первый слайд"></button>
+          <button class="slider__control slider__slide2" aria-label="второй слайд"></button>
+          <button class="slider__control slider__slide3" aria-label="третий слайд"></button>
         </div>      
       </section>
 
       <section class="promo">
         <h2 class="promo__title visually-hidden">Акции</h2>
         <ul class="promo__list">
-          <li class="promo__item">
+          <li class="promo__item promo__raspberry">
             <h3 class="promo__item-title">Малинка даром!</h3>
             <p class="promo__text">
               При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
             </p>
             <a class="promo__btn" href="#">Хочу варенье!</a>
           </li>
-          <li class="promo__item">
+          <li class="promo__item promo__chocolate">
             <h3 class="promo__item-title">Шоколадки даром!</h3>
             <p class="promo__text">
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
@@ -163,30 +166,30 @@
         <h2 class="about__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
         <ul class="about__list">
           <li class="about__item">
-            <span class="about__icon1"></span>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+            <span class=" about__icon about__icon1"></span>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </li>
           <li class="about__item">
-            <span class="about__icon2"></span>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+            <span class="about__icon about__icon2"></span>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
           </li>
           <li class="about__item">
-            <span class="about__icon3"></span>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+            <span class="about__icon about__icon3"></span>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
           </li>
           <li class="about__item">
-            <span class="about__icon4"></span>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+            <span class="about__icon about__icon4"></span>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
           </li>
         </ul>
       </section>
       <article class="blog">
         <h2 class="blog__title">Новое в нашем блоге</h2>
-        <a class="blog__link" href="">10 способов сервировки фруктовых щербетов к столу</a>
+        <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscription">
         <h2 class="subscription__title visually-hidden">Подписка на рассылку</h2>
         <p class="subscription__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <!--форма подписки-->
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="get">
-          <label for="subscription__email">e-mail</label>
-          <input id="subscription__email" type="email" name="login" placeholder="email@example.com">
+          <label class="visually-hidden" for="subscription__email">e-mail</label>
+          <input  class="subscription__form-input" id="subscription__email" type="email" name="login" placeholder="email@example.com">
           <button class="button subscription__btn ">Отправить</button>
         </form>
       </section>
@@ -194,16 +197,16 @@
       <section class="map">
         <h2 class="map__title visually-hidden">Как добраться</h2>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f313ad053af6dec2fa5a3818b5b82a1374f673840e333a88793262525cd97cc&amp;source=constructor" width="1200" height="430"></iframe>
-        <div class="map__info">
-          <p class="map__address map__description">
+          <div class="map__info">
+          <p class="map__address">
             <span class="map__description">Адрес главного офиса 
             и офлайн-магазина:</span>
             ул. Большая Конюшенная, 19/8, Санкт-Петербург
           </p>
-          <p class="map__telephon map__description">
-            Для заказов по телефону:
-            <a class="map__description" href="tel:88124502525">8 812 450-25-25</a>
-            (с 10 до 20 ежедневно)
+          <p class="map__address">
+            <span class="map__description">Для заказов по телефону:</span>
+            <a class="map__telephon" href="tel:88124502525">8 812 450-25-25</a>
+            <span class="map__description">(с 10 до 20 ежедневно)</span>
           </p>
           <button class="button map__btn">
             Форма обратной связи
@@ -216,25 +219,25 @@
         <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="#"><span class="visually-hidden">Facebook</span></a>
+            <a class="social__link social__fb" href="#" aria-label="Facebook"></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#"><span class="visually-hidden">ВКонтакте</span></a>
+            <a class="social__link social__vk" href="#" aria-label="ВКонтакте"></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#"><span class="visually-hidden">Instagram</span></a>
+            <a class="social__link social__insta" href="#" aria-label="Instagram"></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#"><span class="visually-hidden">Твиттер</span></a>
+            <a class="social__link social__tw" href="#" aria-label="Твиттер"></a>
           </li>
         </ul>
       </section>
       <section class="info">
         <h2 class="info__title visually-hidden">Информация</h2>
         <ul class="info__list">
-          <li class="info__item">
+          <li class="info__item heart__icon">
             <a class="info__link" href="#">
-              <span></span> Для поставщиков
+              <span class="info__link-bold">Для поставщиков</span>
             </a>
           </li>
           <li class="info__item">
@@ -279,7 +282,8 @@
     </form>
     <button class="feedback__close" type="button">Закрыть</button>
   </section>
-  
+  </div>
+  </div>
   </body>
 
 </html>
