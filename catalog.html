@@ -8,7 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link  href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="body">
   <div class="site-wrapper">
     <header class="header">
       <nav class="menu">
@@ -119,7 +119,7 @@
             <a class="breadcrumbs__link">Каталог</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link">Сливочное</a>
+            <a class="breadcrumbs__link breadcrumbs__link--active">Сливочное</a>
           </li>
         </ul>
       </section>
@@ -129,12 +129,12 @@
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="filter__line-one">
 
-              <div class="filter__item">
-                <p class="filter__item-title">Сортировка:</p>
-                <button class="filter__select" type="button" aria-label="сортировка по"></button>
+              <fieldset class="filter__item">
+                <legend class="filter__item-title">Сортировка:</legend>
+                <button class="filter__select" value="byDefault" type="button" aria-label="значение"></button>
                 <ul class="filter__list">
                   <li class="filter__item">
-                    <button class="filter__value" value="on popularity" type="button">по популярности</button>
+                    <button class="filter__value" value="onPopularity" type="button">по популярности</button>
                   </li>
                   <li class="filter__item">
                     <button class="filter__value" value="ascending" type="button">сначала недорогие</button>
@@ -143,10 +143,10 @@
                     <button class="filter__value" value="descending" type="button">сначала дорогие</button>
                   </li>
                   <li class="filter__item">
-                    <button class="filter__value" value="by fat content" type="button">по жирности</button>
+                    <button class="filter__value" value="byFatContent" type="button">по жирности</button>
                   </li>
                 </ul>
-              </div>
+              </fieldset>
 
                 <fieldset class="filter-item">
                   <legend class="filter__item-title">Цена: 100 ₽ – 500 ₽</legend>
@@ -188,18 +188,20 @@
         <ul class="goods__list">
             <!--первая линия товаров-->
             <li class="goods__item">
-              <img src="img/catalog1.png" width="267" height="267" alt="фото товара">
+              <img class="goods__item-img" src="img/catalog1.png" width="267" height="267" alt="фото товара">
               <p class="goods__item-prise">
                 310 &#8381;<span>&#8260; кг</span>
               </p>
                 <h3 class="goods__item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                <a class="fast__view" href="#">Быстрый просмотр</a>
             </li>
             <li class="goods__item">
               <img src="img/catalog2.png" width="267" height="267" alt="фото товара">
               <p class="goods__item-prise">
-                410 &#8381;<span>&#8260; кг</span>
+                380 &#8381;<span>&#8260; кг</span>
               </p>
                 <h3 class="goods__item-title">Сливочно-кофейное с кусочками шоколада</h3>
+                <a class="fast__view" href="#">Быстрый просмотр</a>
             </li>
             <li class="goods__item">
               <img src="img/catalog3.png" width="267" height="267" alt="фото товара">
@@ -207,6 +209,7 @@
                 355 &#8381;<span>&#8260; кг</span>
               </p>
                 <h3 class="goods__item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                <a class="fast__view" href="#">Быстрый просмотр</a>
             </li>
             <li class="goods__item">
               <img src="img/catalog4.png" width="267" height="267" alt="фото товара">
@@ -214,6 +217,7 @@
                  415 &#8381;<span>&#8260; кг</span>
               </p>
                 <h3 class="goods__item-title">Сливочное крем-брюле с карамельной подливкой</h3>
+                <a class="fast__view" href="#">Быстрый просмотр</a>
             </li>
             <!--вторая линия товаров-->
             <li class="goods__item">
@@ -222,6 +226,7 @@
                 325 &#8381;<span>&#8260; кг</span>
               </p>
                 <h3 class="goods__item-title">Сливочное с брусничным джемом</h3>
+                <a class="fast__view" href="#">Быстрый просмотр</a>
             </li>
             <li class="goods__item">
               <img src="img/catalog6.png" width="267" height="267" alt="фото товара">
@@ -229,6 +234,7 @@
                 410 &#8381;<span>&#8260; кг</span>
               </p>
                 <h3 class="goods__item-title">Сливочно-черничное с цельными ягодами черники</h3>
+                <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
               <li class="goods__item">
                 <img src="img/catalog7.png" width="267" height="267" alt="фото товара">
@@ -236,6 +242,7 @@
                   315 &#8381;<span>&#8260; кг</span>
                 </p>
                   <h3 class="goods__item-title">Сливочно-лимонное с карамельной присыпкой</h3>
+                  <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
               <li class="goods__item">
                 <img src="img/catalog8.png" width="267" height="267" alt="фото товара">
@@ -243,6 +250,7 @@
                   320 &#8381;<span>&#8260; кг</span>
                 </p>
                   <h3 class="goods__item-title">Сливочное с шоколадной стружкой</h3>
+                  <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
               <!--третья линия товаров-->
               <li class="goods__item">
@@ -251,6 +259,7 @@
                   440 &#8381;<span>&#8260; кг</span>
                 </p>
                   <h3 class="goods__item-title">Сливочно-ванильное с кусочками шоколада</h3>
+                  <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
               <li class="goods__item">
                 <img src="img/catalog10.png" width="267" height="267" alt="фото товара">
@@ -258,6 +267,7 @@
                   435 &#8381;<span>&#8260; кг</span>
                 </p>
                   <h3 class="goods__item-title">Сливочноe с ментоловым сиропом</h3>
+                  <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
               <li class="goods__item">
                 <img src="img/catalog11.png" width="267" height="267" alt="фото товара">
@@ -265,6 +275,7 @@
                   355 &#8381;<span>&#8260; кг</span>
                 </p>
                   <h3 class="goods__item-title">Сливочное с кусочками черного шоколада</h3>
+                  <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
               <li class="goods__item">
                 <img src="img/catalog12.png" width="267" height="267" alt="фото товара">
@@ -272,6 +283,7 @@
                   420 &#8381;<span>&#8260; кг</span>
                 </p>
                   <h3 class="goods__item-title">Сливочное с мятным сиропом</h3>
+                  <a class="fast__view" href="#">Быстрый просмотр</a>
               </li>
             </ul>
             <div class="pagination">
