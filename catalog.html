@@ -148,7 +148,7 @@
                 </ul>
               </fieldset>
 
-                <fieldset class="filter-item">
+                <fieldset class="filter__item">
                   <legend class="filter__item-title">Цена: 100 ₽ – 500 ₽</legend>
                   <div class="range-filter">
                     <div class="range-controls">
@@ -161,23 +161,54 @@
                   </div>
                 </fieldset>
 
-                <fieldset class="filter-item">
+                <fieldset class="filter__item">
                   <legend class="filter__item-title">Жирность:</legend>
-                  <input type="radio" name="fat-content" value="0"> 0%
-                  <input type="radio" name="fat-content" value="0-10" checked> до 10%
-                  <input type="radio" name="fat-content" value="10-30"> до 30%
-                  <input type="radio" name="fat-content" value="30+"> выше 30%
+                  <div class="filter__item-wrapper">
+                    <label class="custom-radio">
+                      <input class="filter__item-radio" type="radio" name="fat-content" value="0">
+                      <span class="filter__item-radio-text">0%</span>
+                    </label>
+                    <label class="custom-radio">
+                      <input class="filter__item-radio" type="radio" name="fat-content" value="0-10" checked>
+                      <span class="filter__item-radio-text">до 10%</span>
+                    </label>
+                    <label class="custom-radio">
+                      <input class="filter__item-radio" type="radio" name="fat-content" value="10-30">
+                      <span class="filter__item-radio-text">до 30%</span>
+                    </label>
+                    <label class="custom-radio">
+                      <input class="filter__item-radio" type="radio" name="fat-content" value="30+">
+                      <span class="filter__item-radio-text">выше 30%</span>
+                    </label>
+                  </div>
                 </fieldset>
               </div>
   
             <div class="filter__line-two">
-              <fieldset class="filter-item">
+              <fieldset class="filter__item">
                 <legend class="filter__item-title">Наполнители:</legend>
-                <input type="checkbox" name="optionally"  value="sugar" checked>сахарные присыпки
-                <input type="checkbox" name="optionally"  value="chocolate" checked>шоколадные
-                <input type="checkbox" name="optionally"  value="fruits">фрукты
-                <input type="checkbox" name="optionally"  value="syrup">сиропы
-                <input type="checkbox" name="optionally"  value="jam">джем
+                <div class="filter__item-wrapper">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="optionally" value="sugar" checked>
+                  <span class="filter__item-checkbox-text">сахарные присыпки</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="optionally" value="chocolate" checked>
+                  <span class="filter__item-checkbox-text">шоколадные</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="optionally" value="fruits">
+                  <span class="filter__item-checkbox-text">фрукты</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="optionally" value="syrup">
+                  <span class="filter__item-checkbox-text">сиропы</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="optionally"  value="jam">
+                  <span class="filter__item-checkbox-text">джем</span>
+                </label>
+              </div>
              </fieldset>
             </div>
 
@@ -287,12 +318,13 @@
               </li>
             </ul>
             <div class="pagination">
-              <a class="pagination__link current" href="#">1</a>
+              <a class="pagination__back disabled" href="#back" aria-label="Назад"></a>
+              <a class="pagination__link link__active" href="#">1</a>
               <a class="pagination__link" href="#">2</a>
               <a class="pagination__link" href="#">3</a>
               <a class="pagination__link" href="#">4</a>
               <a class="pagination__link" href="#">5</a>
-              <a class="pagination__next" href="#next">Вперёд</a>
+              <a class="pagination__next" href="#next" aria-label="Вперёд"></a>
             </div>
       </section>
     </main>

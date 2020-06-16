@@ -470,7 +470,6 @@ line-height: 41px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
   color: var( --extra-gray);
   background-color: var(--basic-white);
 }
@@ -531,6 +530,246 @@ line-height: 41px;
   line-height: 41px;
 }
 
+/*фильтр*/
+
+.filter{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filter__item-title{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/*общие стили*/
+
+.filter__item{
+  border: none;
+}
+
+/*выпадашка*/
+
+.filter__select{
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  border-radius: 20px;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  background: var(--special-bg);
+  color: var(--basic-white);
+  border: none;
+}
+
+.filter__select::after{
+  display: inline-block;
+  content: "";
+  background: url(../img/select-arrow.svg) no-repeat center center;
+  width: 11px;
+  height: 10px;
+  vertical-align: middle;
+  margin-left: 26px;
+  margin-right: 13px;
+}
+
+.filter__select:hover,
+.filter__select:focus{
+  color: var(--extra-gray);
+  background-color: var(--basic-white);
+}
+
+.filter__select:hover::after,
+.filter__select:focus::after{
+  background-color: var(--basic-white);
+  display: inline-block;
+  content: "";
+  background: url(../img/icon-down-dir.svg) no-repeat center center;
+  width: 11px;
+  height: 10px;
+  vertical-align: middle;
+  margin-left: 26px;
+  margin-right: 13px;
+}
+
+.filter__list{
+  display: none;
+  list-style: none;
+  margin-top: 1px;
+  margin-left: -40px;
+}
+
+.filter__item-button{
+margin-left: 0px;
+}
+
+.filter__value{
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: var( --extra-gray);
+  background-color: var(--basic-white);
+  border: none;
+  width: 196px;
+  height: 22px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.filter__value:hover{
+  background-color: var(--filter-value-hover);
+  color: var(--basic-white);
+}
+
+/*жирность*/
+
+.filter__item-wrapper{
+  background-color: var(--special-bg);
+  border-radius: 20px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+.custom-radio>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio>.filter__item-text-radio {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio>.filter__item-text-radio::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.8;
+}
+
+/* стили при наведении курсора на радио */
+.filter__item-radio:not(:disabled):not(:checked)+.filter__item-radio-text:hover::before {
+  opacity: 1;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.filter__item-radio:not(:disabled):active+.filter__item-radio-text::before {
+  opacity: 1;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.filter__item-radio:focus+.filter__item-radio-text::before {
+  border: 1px solid var(--basic-black);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.filter__item-radio:focus:not(:checked)+.filter__item-radio-text::before {
+  opacity: 1;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.filter__item-radio:checked+.filter__item-radio-text::before {
+  background-image: url("../img/radio-on.svg");
+  opacity: 0.8;
+}
+
+.filter__item-radio:checked+.filter__item-radio-text:hover::before {
+  opacity: 1;
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.filter__item-radio:disabled+.filter__item-radio-text::before {
+  opacity: 0.4;
+}
+
+.filter__item-radio-text{
+  padding-left: 9px;
+  padding-right: 15px;
+}
+
+/*добавки*/
+    /* для элемента input c type="checkbox" */
+    .custom-checkbox>input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    /* для элемента label, связанного с .custom-checkbox */
+    .custom-checkbox>span {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    /* создание в label псевдоэлемента before со следующими стилями */
+    .custom-checkbox>span::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 20px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background-image: url(../img/checkbox-off.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0.8;
+    }
+
+    /* стили при наведении курсора на checkbox */
+    .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+      opacity: 1;
+    }
+
+    /* стили для активного чекбокса (при нажатии на него) */
+    .custom-checkbox>input:not(:disabled):active+span::before {
+      opacity: 1;
+    }
+
+    /* стили для чекбокса, находящегося в фокусе */
+    .custom-checkbox>input:focus+span::before {
+      border: 1px solid var(--basic-black);
+      opacity: 1;
+    }
+
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    .custom-checkbox>input:focus:not(:checked)+span::before {
+      opacity: 1;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .custom-checkbox>input:checked+span::before {
+      background-image: url("../img/checkbox-on.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0.8;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox>input:disabled+span::before {
+      opacity: 0.4;
+    }
+
+/*кнопка применить*/
+.filter__btn{
+  color: var(--basic-white);
+  background: var(--special-bg);
+  padding: 14px 29px 9px 29px;
+  border: 2px solid var(--basic-white);
+  border-radius: 20px;
+}
+/*конец фильтра*/
 
 /*список товаров*/
 
@@ -567,4 +806,53 @@ line-height: 41px;
   line-height: 24px;
   color: var(--basic-white);
   display: none;
+}
+
+/*пагинация*/
+
+.pagination{
+  display: flex;
+  align-items: center;
+}
+
+.pagination__link{
+  color: var(--basic-white);
+  padding: 3px 8px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 12px;
+  font-weight: 500;
+
+}
+
+.pagination__next{
+  width: 7px;
+  height: 12px;
+  background: url(../img/paginator-next.svg) no-repeat;
+  margin-left: 14px;
+}
+
+.pagination__back{
+  width: 7px;
+  height: 12px;
+  background: url(../img/paginator-next.svg) no-repeat;
+  transform: rotate(-180deg);
+  opacity: 0.2;
+  margin-right: 26px;
+}
+
+.pagination__link:hover{
+  background-color: var(--special-bg);
+}
+
+.link__active,
+.pagination__link:active{
+  color: var(--extra-gray);
+  background-color: var(--basic-white);
+}
+
+.disabled:hover,
+.disabled:focus{
+  background:none;
 }
