@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -185,7 +185,7 @@
       </section>
       <article class="blog">
         <h2 class="blog__title">Новое в нашем блоге</h2>
-        <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <a class="blog__link link__index" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscription">
         <h2 class="subscription__title visually-hidden">Подписка на рассылку</h2>
@@ -193,7 +193,7 @@
         <!--форма подписки-->
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="subscription__email">e-mail</label>
-          <input  class="subscription__form-input" id="subscription__email" type="email" name="login" placeholder="email@example.com">
+          <input  class="subscription__form-input form" id="subscription__email" type="email" name="login" placeholder="email@example.com">
           <button class="button subscription__btn ">Отправить</button>
         </form>
       </section>
@@ -209,7 +209,7 @@
           </p>
           <p class="map__address">
             <span class="map__description">Для заказов по телефону:</span>
-            <a class="map__telephon" href="tel:88124502525">8 812 450-25-25</a>
+            <a class="map__telephon link__index" href="tel:88124502525">8 812 450-25-25</a>
             <span class="map__description">(с 10 до 20 ежедневно)</span>
           </p>
           <button class="button map__btn">
@@ -240,22 +240,22 @@
         <h2 class="info__title visually-hidden">Информация</h2>
         <ul class="info__list">
           <li class="info__item heart__icon">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
               <span class="info__link-bold">Для поставщиков</span>
             </a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
                О производстве
             </a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
               Наши документы
             </a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
               Экологические стандарты
             </a>
           </li>
@@ -267,7 +267,7 @@
           <img class="copy__img" src="img/logo-htmlacademy.svg" width="108" height="39" alt="логотип академии">
         </a>
         <p class="copy__text">
-          Сделано в <a class="copy__link" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019
+          Сделано в <a class="copy__link link__body" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019
         </p>
       </section> 
     </footer>

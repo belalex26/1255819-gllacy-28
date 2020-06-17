@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Глэйси каталог</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link  href="css/style.css" rel="stylesheet">
 </head>
@@ -113,10 +113,10 @@
         <h2 class="breadcrumbs__title visually-hidden">Навигация</h2>
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <a class="breadcrumbs__link link__body" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link">Каталог</a>
+            <a class="breadcrumbs__link link__body">Каталог</a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link breadcrumbs__link--active">Сливочное</a>
@@ -124,14 +124,14 @@
         </ul>
       </section>
       <section class="goods">
-        <h2 class="goods__title">Сливочное</h2>
+        <h2 class="goods__title">Сливочное мороженное</h2>
         <div class="filter"> <!--форма фильтра-->
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="filter__line-one">
 
               <fieldset class="filter__item">
                 <legend class="filter__item-title">Сортировка:</legend>
-                <button class="filter__select" value="byDefault" type="button" aria-label="значение"></button>
+                <button class="filter__select" value="byDefault" type="button" aria-label="значение">по популярности</button>
                 <ul class="filter__list">
                   <li class="filter__item">
                     <button class="filter__value" value="onPopularity" type="button">по популярности</button>
@@ -150,20 +150,20 @@
 
                 <fieldset class="filter__item">
                   <legend class="filter__item-title">Цена: 100 ₽ – 500 ₽</legend>
-                  <div class="range-filter">
-                    <div class="range-controls">
-                      <div class="scale">
-                        <div class="bar"></div>
+                  <div class="filter__range-wrapper">
+                    <div class="filter__range-controls">
+                      <div class="filter__scale">
+                        <div class="filter__bar"></div>
                       </div>
-                      <div class="toggle toggle-min"></div>
-                      <div class="toggle toggle-max"></div>
+                      <div class="filter__toggle toggle-min"></div>
+                      <div class="filter__toggle toggle-max"></div>
                     </div>
                   </div>
                 </fieldset>
 
                 <fieldset class="filter__item">
                   <legend class="filter__item-title">Жирность:</legend>
-                  <div class="filter__item-wrapper">
+                  <div class="filter__item-wrapper wrapper-radio">
                     <label class="custom-radio">
                       <input class="filter__item-radio" type="radio" name="fat-content" value="0">
                       <span class="filter__item-radio-text">0%</span>
@@ -187,25 +187,25 @@
             <div class="filter__line-two">
               <fieldset class="filter__item">
                 <legend class="filter__item-title">Наполнители:</legend>
-                <div class="filter__item-wrapper">
+                <div class="filter__item-wrapper wrapper-checkbox">
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="optionally" value="sugar" checked>
+                  <input class="filter__item-checkbox" type="checkbox" name="optionally" value="sugar" checked>
                   <span class="filter__item-checkbox-text">сахарные присыпки</span>
                 </label>
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="optionally" value="chocolate" checked>
+                  <input class="filter__item-checkbox" type="checkbox" name="optionally" value="chocolate" checked>
                   <span class="filter__item-checkbox-text">шоколадные</span>
                 </label>
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="optionally" value="fruits">
+                  <input class="filter__item-checkbox" type="checkbox" name="optionally" value="fruits">
                   <span class="filter__item-checkbox-text">фрукты</span>
                 </label>
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="optionally" value="syrup">
+                  <input class="filter__item-checkbox" type="checkbox" name="optionally" value="syrup">
                   <span class="filter__item-checkbox-text">сиропы</span>
                 </label>
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="optionally"  value="jam">
+                  <input class="filter__item-checkbox" type="checkbox" name="optionally"  value="jam">
                   <span class="filter__item-checkbox-text">джем</span>
                 </label>
               </div>
@@ -350,22 +350,22 @@
         <h2 class="info__title visually-hidden">Информация</h2>
         <ul class="info__list">
           <li class="info__item heart__icon">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
               <span class="info__link-bold">Для поставщиков</span>
             </a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
                О производстве
             </a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
               Наши документы
             </a>
           </li>
           <li class="info__item">
-            <a class="info__link" href="#">
+            <a class="info__link link__body" href="#">
               Экологические стандарты
             </a>
           </li>
@@ -377,7 +377,7 @@
           <img class="copy__img" src="img/logo-htmlacademy.svg" width="108" height="39" alt="логотип академии">
         </a>
         <p class="copy__text">
-          Сделано в <a class="copy__link" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019
+          Сделано в <a class="copy__link link__body" href="https://htmlacademy.ru/intensive/htmlcss"> HTML Academy</a> © 2019
         </p>
       </section>  
     </footer>
