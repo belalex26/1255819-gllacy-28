@@ -503,6 +503,7 @@ line-height: 41px;
 .link__body:focus,
 .link__body:active{
   color: var(--link-hover1);
+  border-bottom: 1px solid var(--link-body-border);
   outline: none;
 }
 
@@ -534,14 +535,6 @@ line-height: 41px;
 .copy__link{
   color: var( --basic-white);
   border-bottom: 1px solid var(--special-bg);
-}
-
-.link__body:hover,
-.link__body:focus,
-.link__body:active{
-  color: var(--link-hover1);
-  border-bottom: 1px solid var(--link-body-border);
-  outline: none;
 }
 
 /*каталог*/
@@ -589,7 +582,6 @@ line-height: 41px;
 .breadcrumbs__list{
   list-style: none;
   display: flex;
-
 }
 
 .breadcrumbs__link{
