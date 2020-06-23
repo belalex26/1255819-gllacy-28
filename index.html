@@ -18,10 +18,10 @@
         </a>
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="#">Каталог</a>
+            <a class="menu__link menu__submenu" href="#">Каталог</a>
             <ul class="submenu">
               <li class="submenu__item">
-                <a class="submenu__link" href="#">Новинки</a>
+                <a class="submenu__link" href="#"><span>Новинки</span></a>
               </li>
              <li class="submenu__item">
                 <a class="submenu__link" href="catalog.html">Сливочное</a>
@@ -48,8 +48,8 @@
           <div class="navigation-bar__search-wrapper">
             <a class="navigation-bar__search-link" href="#" aria-label="поиск"></a>
             <div class="navigation-bar__search-block">
-              <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-                <input type="text" placeholder="Крем-брюле">
+              <form action="https://echo.htmlacademy.ru" method="get">
+                <input class="search__form form" type="text" placeholder="Крем-брюле">
               </form>
             </div>
           </div>
@@ -57,20 +57,22 @@
           <div class="navigation-bar__singIn-wrapper">
             <a class="navigation-bar__singIn-link" href="#">Вход</a>
             <div class="navigation-bar__singIn-block">
-              <form class="singIn__form" action="https://echo.htmlacademy.ru" method="get">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <div class="singIn__description">
-                  <label for="singIn__login">Логин</label>
-                  <input id="singIn__login" type="email" name="login" placeholder="email@example.com">
+                  <label class="visually-hidden" for="singIn__login">Логин</label>
+                  <input class="singIn__form form" id="singIn__login" type="email" name="login" placeholder="email@example.com">
                 </div>
                 <div class="singIn__description">
-                  <label for="singIn__password">Пароль</label>
-                  <input id="singIn__password" type="password" name="password" placeholder="......">
+                  <label class="visually-hidden" for="singIn__password" >Пароль</label>
+                  <input class="singIn__form form" id="singIn__password" type="password" name="password" placeholder="......">
                 </div>
-                <button class="btn" type="submit">Войти</button>
-                <div class="singIn__list"> <!--обертка-->
-                  <a class="singIn__link" href="#">Забыли пароль?</a>
-                  <a class="singIn__link" href="#">Новая регистрация</a>
-                </div>
+                <div class="singIn__btn-wrapper">
+                  <button class="singIn__btn button" type="submit">Войти</button>
+                  <div class="singIn__list"> <!--обертка-->
+                    <a class="singIn__link link__index" href="#"><span>Забыли пароль?</span></a>
+                    <a class="singIn__link link__index" href="#"><span>Новая регистрация</span></a>
+                  </div>
+                </div>  
               </form>
             </div>
           </div>
@@ -84,6 +86,7 @@
         <a class="contacts__tel" href="tel:88124502525">8 812 450-25-25</a>
       </section>
     </header>
+
     <main class="main">
       <h1 class="idex-title visually-hidden">Магазин Глэйси</h1>
       <section class="slider">
@@ -138,16 +141,21 @@
             <p class="goods__item-prise">
               310 &#8381;<span>/кг</span>
             </p>
-              <h3 class="goods__item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
-              <a class="fast__view button" href="#">Быстрый просмотр</a>
+              <a class="goods__item-title"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+              <div class="fast__view-wrapper">
+                <a class="fast__view button" href="#">Быстрый просмотр</a>
+              </div>
           </li>
+
           <li class="goods__item goods__item-index">
             <img class="goods__item-img" src="img/catalog2.png" width="267" height="267" alt="фото товара">
             <p class="goods__item-prise">
               410 &#8381;<span>/кг</span>
             </p>
               <h3 class="goods__item-title"><span>Сливочно-кофейное с кусочками шоколада</span></h3>
-              <a class="fast__view button" href="#">Быстрый просмотр</a>
+              <div class="fast__view-wrapper">
+                <a class="fast__view button" href="#">Быстрый просмотр</a>
+              </div>
           </li>
           <li class="goods__item goods__item-index">
             <img class="goods__item-img" src="img/catalog3.png" width="267" height="267" alt="фото товара">
@@ -155,7 +163,9 @@
               355 &#8381;<span>/кг</span>
             </p>
               <h3 class="goods__item-title"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
-              <a class="fast__view button" href="#">Быстрый просмотр</a>
+              <div class="fast__view-wrapper">
+                <a class="fast__view button" href="#">Быстрый просмотр</a>
+              </div>
           </li>
           <li class="goods__item goods__item-index">
             <img class="goods__item-img" src="img/catalog4.png" width="267" height="267" alt="фото товара">
@@ -163,32 +173,45 @@
                415 &#8381;<span>/кг</span>
             </p>
               <h3 class="goods__item-title"><span>Сливочное крем-брюле с карамельной подливкой</span></h3>
-              <a class="fast__view button" href="#">Быстрый просмотр</a>
+              <div class="fast__view-wrapper">
+                <a class="fast__view button" href="#">Быстрый просмотр</a>
+              </div>
           </li>
         </ul>
       </section>
+
       <section class="about">
         <h2 class="about__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
         <ul class="about__list">
           <li class="about__item">
-            <span class=" about__icon about__icon1"></span>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+            <span class="about__icon about__icon1"></span>
+            <p class="about__text">
+              Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+            </p>
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon2"></span>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+            <span class="about__icon about__icon2"></span>
+            <p class="about__text">
+              Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon3"></span>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+            <span class="about__icon about__icon3"></span>
+            <p class="about__text">
+              Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+            </p>
           </li>
           <li class="about__item">
-            <span class="about__icon about__icon4"></span>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-          </li>
+            <span class="about__icon about__icon4"></span>
+            <p class="about__text">
+              Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+          </li>    
         </ul>
       </section>
-      <div class="line-wrap">
+      <div class="line-wrapper">
       <article class="blog">
         <h2 class="blog__title">Новое в нашем блоге</h2>
         <div class="link__wrapper">
-          <a class="blog__link link__index" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="blog__link link__index" href="#"><span>10 способов сервировки фруктовых щербетов к столу</span></a>
         </div>
       </article>
       <section class="subscription">
@@ -205,24 +228,27 @@
     </div> <!--контейнер-->
       <section class="map">
         <h2 class="map__title visually-hidden">Как добраться</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f313ad053af6dec2fa5a3818b5b82a1374f673840e333a88793262525cd97cc&amp;source=constructor" width="1200" height="430"></iframe>
-          <div class="map__info">
-          <p class="map__address">
-            <span class="map__description">Адрес главного офиса 
-            и офлайн-магазина:</span>
+        <div class="map-wrapper">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9f313ad053af6dec2fa5a3818b5b82a1374f673840e333a88793262525cd97cc&amp;source=constructor" width="1200" height="430"></iframe>
+        <div class="map__info">
+          <p class="map__adress">
+            <span class="map__adress-text">Адрес главного офиса и офлайн-магазина:</span>
             ул. Большая Конюшенная, 19/8, Санкт-Петербург
           </p>
           <p class="map__telephon">
-            <span class="map__description">Для заказов по телефону:</span>
-            <a class="map__telephon-link link__index" href="tel:88124502525">8 812 450-25-25</a>
-            <span class="map__description">(с 10 до 20 ежедневно)</span>
+            <span class="map__telephon-text">Для заказов по телефону:</span>
+            <a class="map__telephon-link link__index" href="tel:88124502525"><span>8 812 450-25-25<span></a>
+            <span class="map__telephon-timeline">(с 10 до 20 ежедневно)</span>
           </p>
           <button class="button map__btn">
             Форма обратной связи
           </button>
         </div>
+        </div>
+
       </section>
     </main>
+    <div class="container">
     <footer class="footer">
       <section class="social">
         <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
@@ -278,19 +304,22 @@
     </footer>
 
   <section class="feedback">
-    <h2 class="feedback__title visually-hidden">Обратная связь</h2>
-    <p class="feedback__description">Мы обязательно Вам ответим!</p>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="feedback__email">e-mail</label>
-        <input id="feedback__email" type="email" name="login" placeholder="email@example.com">
-        <label for="feedback__text">Текст сообщения</label>
-        <textarea name="feedback__text" rows="5">В свободной форме</textarea>
-      </p>
-      <button class="btn" type="submit">Отправить</button>
-    </form>
-    <button class="feedback__close" type="button">Закрыть</button>
+      <h2 class="feedback__title visually-hidden">Обратная связь</h2>
+      <p class="feedback__description">Мы обязательно Вам ответим!</p>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form-wrapper">
+          <label for="feedback__name">e-mail</label>
+          <input class="feedback__name form" id="feedback__name" type="text" name="name" placeholder="Имя Фамилия">
+          <label for="feedback__email">e-mail</label>
+          <input class="feedback__email form" id="feedback__email" type="email" name="login" placeholder="email@example.com">
+          <label for="feedback__text">Текст сообщения</label>
+          <textarea class="feedback__text form" name="feedback__text" rows="5">В свободной форме</textarea>
+          <button class="feedback__btn button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="feedback__close" type="button" aria-label="Закрыть"></button>
   </section>
+</div>
   </div>
   </body>
 
