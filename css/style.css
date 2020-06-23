@@ -39,6 +39,12 @@
   --filter-value-hover:#1E90FF;
   --scale-bg:rgba(248, 247, 244, 0.5);
   --basket-light: #ABABAB;
+  --box-shadow3: rgba(50, 50, 50, 0.2);
+  --submenu-item-hover: #FBDED7;
+  --submenu-item-active: #D07058;
+  --submenu-item-active2: #F6B5A5;
+  --box-shadow2: rgba(0, 0, 0, 0.4);
+  --singIn-link-border: rgba(50, 50, 50, 0.3);
 }
 
 .body,
@@ -234,7 +240,7 @@ a {
   background-color: var(--basic-white);
   list-style: none;
   border-radius: 4px;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 20px var(--box-shadow2);
   z-index: 2;
 }
 
@@ -260,7 +266,7 @@ a {
 .submenu__link span{
   display: block;
   font-weight: bold;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+  border-bottom: 1px solid var(--box-shadow3);
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 15px;
@@ -269,18 +275,18 @@ a {
 
 .submenu__item:hover{
   border-radius: 4px;
-  background-color: #FBDED7;
+  background-color: var(--submenu-item-hover); 
 }
 
 .submenu__item:focus-within{ 
   border-radius: 4px;
-  background-color: #FBDED7;
+  background-color: var(--submenu-item-hover);
   outline: none;
 }
 
 .submenu__item:active{
   border-radius: 4px;
-  background-color: #F6B5A5;
+  background-color: var(--submenu-item-active2);
   outline: none;
 }
 
@@ -288,7 +294,7 @@ a {
 .submenu__item--active:hover,
 .submenu__item--active:focus-within{
   border-radius: 4px;
-  background-color:#D07058;
+  background-color: var(--submenu-item-active);
   outline: none;
   border-radius: 0;
 }
@@ -342,7 +348,7 @@ a {
   right: 0px;
   width: 341px;
   background: var( --subscription-bg);
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 20px var(--box-shadow2);
   border-radius: 4px;
 }
 
@@ -421,7 +427,7 @@ display: block;
   right: 0;
   width: 277px;
   background: var( --subscription-bg);
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 20px var(--box-shadow2);
   border-radius: 4px;
   font-size: 14px;
   line-height: 16px;
@@ -467,7 +473,7 @@ display: block;
 }
 
 .singIn__link span{
-  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+  border-bottom: 1px solid var(--singIn-link-border);
 }
 
 
