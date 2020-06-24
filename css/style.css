@@ -86,6 +86,7 @@ a {
   box-shadow: 0px 2px 2px var(--btn-box-shadow);
   border-radius: 70px;
   border: none;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -103,6 +104,30 @@ a {
     linear-gradient(180deg, var(--btn-color1) 0%, var(--btn-color2) 100%);
   box-shadow: inset 0px 2px 2px var(--btn-box-shadow3);
   outline: none;
+}
+
+/*средняя кнопка*/
+.button-middle{
+  border-radius: 26px;
+  background: linear-gradient(180deg, var(--btn-color1) 0%, var(--btn-color2) 100%);
+  box-shadow: 0px 2px 2px var(--btn-middle-shadow);
+  cursor: pointer;
+  color: var(--basic-white);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.button-middle:hover{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, var(--btn-color1) 0%, var(--btn-color2) 100%);
+  box-shadow: 0px 1px 2px var(--btn-box-shadow2);
+  outline: none;
+}
+
+.button-middle:active{
+background: linear-gradient(0deg, var(--btn-grad), var(--btn-grad)), linear-gradient(180deg, var(--btn-color1) 0%, var(--btn-color2) 100%);
+box-shadow: inset 0px 2px 2px var(--btn-box-shadow3);
+outline: none;
 }
 
 /*формы общие стили*/
@@ -990,11 +1015,27 @@ display: block;
   position: absolute;
   top: 15px;
   right: 16px;
-  width: 18px;
-  height: 17px;
+  width: 20px;
+  height: 19px;
   border: none;
   background-color: var(--subscription-bg);
   background-image: url(../img/cross-big.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.feedback__close:hover,
+.feedback__close:focus{
+  outline: none;
+  box-shadow: 0 1px 0 var(--active-menu--shadow);
+}
+
+.feedback__close:active{
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: inset 0px 2px 1px var(--active-menu--shadow);
+  border-radius: 4px;
 }
 
 /*футер*/
@@ -1172,17 +1213,26 @@ outline: none;
   background-image: url(../img/cross-small.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   margin-left: 6px;
   margin-right: 9px;
   margin-top: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .basket__close:hover,
-.basket__close:focus,
+.basket__close:focus{
+  outline: none;
+  box-shadow: 0 1px 0 var(--active-menu--shadow);
+}
+
 .basket__close:active{
   outline: none;
+  border: 1px solid transparent;
+  box-shadow: inset 0px 2px 1px var(--active-menu--shadow);
+  border-radius: 4px;
 }
 
 .basket__img{
@@ -1226,7 +1276,6 @@ outline: none;
   font-size: 18px;
   line-height: 16px;
   padding: 13px 15px;
-
 }
 
 /*меню*/
@@ -1407,13 +1456,13 @@ margin-bottom: 14px;
 .filter__select:focus{
   color: var(--extra-gray);
   font-weight: 500;
-  background-color: var(--basic-white);
+  background-color: var(--special-bg);
   outline: none;
 }
 
 .filter__select:hover::after,
 .filter__select:focus::after{
-  background-color: var(--basic-white);
+  background-color: var(--special-bg);
   display: inline-block;
   content: "";
   background: url(../img/icon-down-dir.svg) no-repeat center center;
@@ -1767,14 +1816,29 @@ z-index: 4;
 
 .goods__item-title{
   width: 267px;
+  color: var(--basic-white);
   font-weight: 500;
   font-size: 16px;
   text-align: center;
   margin-bottom: 14px;
+  z-index: 8;
+  cursor: pointer;
 }
 
 .goods__item-title span{
   border-bottom: 1px solid var(--special-bg);
+}
+
+.goods__item-title:hover,
+.goods__item-title:focus{
+  color: var(--link-hover1);
+  outline: none;
+}
+
+.goods__item-title span:hover,
+.goods__item-title span:focus-within,
+.goods__item-title span:active{
+  border-bottom: 1px solid var(--link-body-border);
 }
 
 .fast__view-wrapper{
@@ -1793,7 +1857,7 @@ z-index: 4;
 }
 
 .goods__item:hover::after,
-.goods__item:focus::after{
+.goods__item:focus-within::after{
   background-color: var(--special-bg);
   box-shadow: var(--box-shadow);
   z-index: 7;
@@ -1801,12 +1865,12 @@ z-index: 4;
 
 .goods__item:hover>.fast__view-wrapper{
   display: block;
-  z-index: 7;
+  z-index: 8;
 }
 
-.goods__item:focus>.fast__view-wrapper{
+.goods__item:focus-within>.fast__view-wrapper{
   display: block;
-  z-index: 7;
+  z-index: 8;
 }
 
 /*пагинация*/
@@ -1827,6 +1891,7 @@ z-index: 4;
   line-height: 18px;
   margin-right: 12px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .pagination__link:hover,
