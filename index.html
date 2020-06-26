@@ -240,15 +240,16 @@
             <a class="map__telephon-link link__index" href="tel:88124502525"><span>8 812 450-25-25<span></a>
             <span class="map__telephon-timeline">(с 10 до 20 ежедневно)</span>
           </p>
-          <button class="button map__btn">
+          <a class="button map__btn">
             Форма обратной связи
-          </button>
+          </a>
         </div>
         </div>
 
       </section>
     </main>
     <div class="container">
+
     <footer class="footer">
       <section class="social">
         <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
@@ -302,25 +303,29 @@
         </p>
       </section> 
     </footer>
+    </div>
 
-  <section class="feedback">
+  <section class="feedback__modal">
+    <div class="wrap">
+      <div class="modal__content">
       <h2 class="feedback__title visually-hidden">Обратная связь</h2>
       <p class="feedback__description">Мы обязательно Вам ответим!</p>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-wrapper">
-          <label for="feedback__name">e-mail</label>
+          <label class="visually-hidden" for="feedback__name">e-mail</label>
           <input class="feedback__name form" id="feedback__name" type="text" name="name" placeholder="Имя Фамилия">
-          <label for="feedback__email">e-mail</label>
-          <input class="feedback__email form" id="feedback__email" type="email" name="login" placeholder="email@example.com">
-          <label for="feedback__text">Текст сообщения</label>
-          <textarea class="feedback__text form" name="feedback__text" rows="5">В свободной форме</textarea>
+          <label class="visually-hidden" for="feedback__email">e-mail</label>
+          <input class="feedback__email form" id="feedback__email" type="email" name="e-mail" placeholder="email@example.com">
+          <label class="visually-hidden" for="feedback__text">Текст сообщения</label>
+          <textarea class="feedback__text form" name="feedback__text" id="feedback__text" rows="5" placeholder="В свободной форме"></textarea>
           <button class="feedback__btn button" type="submit">Отправить</button>
         </div>
       </form>
       <button class="feedback__close" type="button" aria-label="Закрыть"></button>
+    </div>
+    </div>
   </section>
-</div>
-  </div>
-  </body>
 
+  <script src="/js/script.js"></script>
+  </body>
 </html>
