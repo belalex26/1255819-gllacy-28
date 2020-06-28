@@ -240,12 +240,9 @@
             <a class="map__telephon-link link__index" href="tel:88124502525"><span>8 812 450-25-25<span></a>
             <span class="map__telephon-timeline">(с 10 до 20 ежедневно)</span>
           </p>
-          <a class="button map__btn">
-            Форма обратной связи
-          </a>
+          <a href="feedback.html" class="button callback-form-button">Форма обратной связи</a>
         </div>
         </div>
-
       </section>
     </main>
     <div class="container">
@@ -305,27 +302,23 @@
     </footer>
     </div>
 
-  <section class="feedback__modal">
-    <div class="wrap">
-      <div class="modal__content">
-      <h2 class="feedback__title visually-hidden">Обратная связь</h2>
-      <p class="feedback__description">Мы обязательно Вам ответим!</p>
-      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-wrapper">
-          <label class="visually-hidden" for="feedback__name">e-mail</label>
-          <input class="feedback__name form" id="feedback__name" type="text" name="name" placeholder="Имя Фамилия">
-          <label class="visually-hidden" for="feedback__email">e-mail</label>
-          <input class="feedback__email form" id="feedback__email" type="email" name="e-mail" placeholder="email@example.com">
-          <label class="visually-hidden" for="feedback__text">Текст сообщения</label>
-          <textarea class="feedback__text form" name="feedback__text" id="feedback__text" rows="5" placeholder="В свободной форме"></textarea>
-          <button class="feedback__btn button" type="submit">Отправить</button>
-        </div>
-      </form>
-      <button class="feedback__close" type="button" aria-label="Закрыть"></button>
+    <div class="modal-mask">
+      <section class="modal modal-callback">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <p class="callback__title">Мы обязательно вам ответим!</p>
+        <form class="callback" name="callback" method="post" action="https://echo.htmlacademy.ru">
+            <label for="callback-name" class="visible-hidden" aria-label="Ваше имя"></label>
+            <input class="callback__name form" type="text" name="callback-name" id="callback-name" placeholder="Имя Фамилия">
+            <label for="callback-email" class="visible-hidden" aria-label="Ваша почта"></label>
+            <input class="callback__email form" type="email" name="callback-email" id="callback-email" placeholder="email@example.com">
+          <textarea class="callback__message form" name="callback-message" rows="8" cols="80" placeholder="В свободной форме"></textarea>
+          <button class="button callback__submit" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </section>
     </div>
-    </div>
-  </section>
+    
+    <script src="js/script.js"></script>
 
-  <script src="/js/script.js"></script>
   </body>
 </html>

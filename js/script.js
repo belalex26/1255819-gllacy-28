@@ -1,51 +1,54 @@
-var feedbackLink = document.querySelector(".map__btn");
-var feedbackPopup = document.querySelector(".feedback__modal");
-var feedbackClose = feedbackPopup.querySelector(".feedback__close");
-var feedbackForm = feedbackPopup.querySelector(".feedback__form");
-var feedbackLogin = feedbackPopup.querySelector(".feedback__email");
+var link = document.querySelector(".callback-form-button");
+var popup = document.querySelector(".modal-callback");
+var mask = document.querySelector(".modal-mask");
+var close = popup.querySelector(".modal-close");
 
-var isStorageSupport = true;
-var storage = "";
+var form = popup.querySelector("form");
+var name = popup.querySelector("[name=callback-name]");
+var email = popup.querySelector("[name=callback-email]");
+var message = popup.querySelector("[name=callback-message]");
 
-try {
-  storage = localStorage.getItem("email");
-} catch (err) {
-  isStorageSupport = false;
-}
+var storageName = localStorage.getItem("name");
+var storageEmail = localStorage.getItem("email");
 
-feedbackLink.addEventListener("click", function (evt) {
+link.addEventListener("click", function (evt) {
   evt.preventDefault();
-  feedbackPopup.classList.add("modal-show");
-  
-  if (storage) {
-    feedbackLogin.value = storage;
-  } else {
-    feedbackLogin.focus();
+  popup.classList.add("show-modal");
+  mask.classList.add("visible");
+
+  if (storageName && storageEmail) {
+    name.value = storageName;
+    email.value = storageEmail;
   }
 });
 
-feedbackClose.addEventListener("click", function (evt) {
+close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  feedbackPopup.classList.remove("modal-show");
-  feedbackPopup.classList.remove("modal-error");
+  popup.classList.remove("show-modal");
+  mask.classList.remove("visible");
+  popup.classList.remove("error-modal");
 });
 
-feedbackForm.addEventListener("submit", function (evt) {
-  if (!feedbackLogin.value) {
+form.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  if (!name.value || !email.value || !message.value) {
     evt.preventDefault();
-    feedbackPopup.classList.add("modal-error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("email", feedbackLogin.value);
-    }
+    popup.classList.remove("error-modal");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("error-modal");
+  }
+  else {
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("email", email.value);
   }
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (feedbackPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      feedbackPopup.classList.remove("modal-show");
-    }
+if (evt.keyCode === 27) {
+  if (popup.classList.contains("show-modal")) {
+    popup.classList.remove("show-modal");
+    popup.classList.remove("error-modal");
+    mask.classList.remove("visible");
   }
+}
 });
