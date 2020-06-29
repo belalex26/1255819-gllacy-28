@@ -13,7 +13,7 @@
   <div class="container-inner">
     <header class="header">
       <nav class="menu">
-        <a class="menu__link-logo" href="index.html" class="logo">
+        <a class="menu__link-logo logo" href="index.html">
           <img class="logo__images" src="img/logo.svg" width="154" height="64" alt="Gllacy shop">
         </a>
         <ul class="menu__list">
@@ -44,7 +44,7 @@
             <a class="menu__link" href="#"><span>О компании</span></a>
           </li>
         </ul>
-        <div class="navigation-bar"> <!--обертка-->
+        <div class="navigation-bar-inner"> <!--обертка-->
 
           <div class="navigation-bar__search-wrapper">
             <a class="navigation-bar__search-link" href="#" aria-label="поиск"></a>
@@ -102,6 +102,7 @@
                 <a class="basket__btn button" href="#">Оформить заказ</a>
               </div>
             </div>
+          </div>
         </div>
       </nav>
       <section class="contacts">
@@ -133,31 +134,21 @@
         <div class="filter"> <!--форма фильтра-->
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="filter__line-one">
-
               <fieldset class="filter__item">
                 <legend class="filter__item-title">Сортировка:</legend>
+
                 <div class="filter__select-wrapper">
-                  <button class="filter__select" value="byDefault" type="button" aria-label="значение">по популярности</button>
-              
-                <ul class="filter__list">
-                  <li class="filter__select-item">
-                    <button class="filter__value" value="onPopularity" type="button">по популярности</button>
-                  </li>
-                  <li class="filter__select-item">
-                    <button class="filter__value" value="ascending" type="button">сначала недорогие</button>
-                  </li>
-                  <li class="filter__select-item">
-                    <button class="filter__value" value="descending" type="button">сначала дорогие</button>
-                  </li>
-                  <li class="filter__select-item">
-                    <button class="filter__value" value="byFatContent" type="button">по жирности</button>
-                  </li>
-                </ul>
-              </div>
+                  <select class="filter__select" id="filters-sorting" name="filters-sorting">
+                    <option class="filter__select-item" value="popularity">по популярности</option>
+                    <option class="filter__select-item" value="ascending">сначала недорогие</option>
+                    <option class="filter__select-item" value="descending">сначала дорогие</option>
+                    <option class="filter__select-item" value="byFatContent">по жирности</option>
+                  </select>
+                </div>
               </fieldset>
 
-                <fieldset class="filter__item">
-                  <legend class="filter__item-title">Цена: 100 ₽ – 500 ₽</legend>
+                <fieldset class="filter__item filter__item-price">
+                  <legend class="filter__item-title filter__item-title-price">Цена: 100 ₽ – 500 ₽</legend>
                   <div class="filter__range-wrapper">
                     <div class="filter__range-controls">
                       <div class="filter__scale">
@@ -230,7 +221,7 @@
               <p class="goods__item-prise">
                 310 &#8381;<span>/кг</span>
               </p>
-              <a class="goods__item-title"href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+              <a class="goods__item-title" href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
               <div class="fast__view-wrapper">
                 <a class="fast__view button" href="#">Быстрый просмотр</a>
               </div>
