@@ -50,7 +50,8 @@
             <a class="navigation-bar__search-link" href="#" aria-label="поиск"></a>
             <div class="navigation-bar__search-block">
               <form action="https://echo.htmlacademy.ru" method="get">
-                <input class="search__form form" type="text" placeholder="Крем-брюле">
+                <label class="visually-hidden" for="search__form"></label>
+                <input class="search__form form" type="text" id="search__form" placeholder="Крем-брюле">
               </form>
             </div>
           </div>
@@ -136,6 +137,7 @@
               <fieldset class="filter__item">
                 <legend class="filter__item-title">Сортировка:</legend>
                 <div class="filter__select-wrapper">
+                  <label class="visually-hidden" for="filters-sorting"></label>
                   <select class="filter__select" id="filters-sorting" name="filters-sorting">
                     <option class="filter__select-item" value="popularity">по популярности</option>
                     <option class="filter__select-item" value="ascending">сначала недорогие</option>
