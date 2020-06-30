@@ -2,6 +2,7 @@
 
 * Студент: [Александра Белова](https://up.htmlacademy.ru/htmlcss/28/user/1255819).
 * Наставник: Андрей Гинтер.
+* Ссылка на проект: https://belalex26.github.io/1255819-gllacy-28/
 
 ---
 
